@@ -24,9 +24,6 @@ class ListaNotasController: UITableViewController {
         let miContexto = miDelegate.persistentContainer.viewContext
         let request = Nota.fetchRequest()
         let notas = try! miContexto.fetch(request)
-        for nota in notas {
-            print(nota.texto!)
-        }
         
         self.listaNotas = notas
         self.tableView.reloadData()
@@ -48,6 +45,7 @@ class ListaNotasController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MiCelda", for: indexPath)
 
         cell.textLabel?.text = self.listaNotas[indexPath.row].texto
+        cell.detailTextLabel?.text = self.listaNotas[indexPath.row].libreta?.nombre
 
         return cell
     }

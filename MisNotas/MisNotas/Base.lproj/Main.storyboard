@@ -17,57 +17,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Aqui debes añadir el texto que quieras almacenar en tus notas. Recuerda pulsar &quot;guardar&quot;." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lqu-ar-J4j">
-                                <rect key="frame" x="76" y="179" width="240" height="128"/>
+                                <rect key="frame" x="76" y="123" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c8-XN-Xbh">
-                                <rect key="frame" x="82" y="494" width="64" height="35"/>
+                                <rect key="frame" x="76" y="571" width="64" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="m5Y-V6-i9S"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="crear"/>
                                 <connections>
                                     <action selector="crear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swz-x4-TJC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1a-St-MGZ">
-                                <rect key="frame" x="237" y="494" width="84" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1a-St-MGZ">
+                                <rect key="frame" x="232" y="571" width="84" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="guardar"/>
                                 <connections>
                                     <action selector="guardar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="byx-f6-qhD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTd-gm-PfH">
+                                <rect key="frame" x="135" y="666" width="122" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="nueva libreta"/>
+                                <connections>
+                                    <action selector="nuevaLibreta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qwp-b4-QJ2"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfs-ze-LDe">
-                                <rect key="frame" x="106" y="399" width="181" height="28"/>
+                                <rect key="frame" x="106" y="308" width="181" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="4TW-D3-Iq1"/>
+                                    <constraint firstAttribute="height" constant="28" id="VtK-e8-5Ud"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljQ-wl-G5A">
+                                <rect key="frame" x="0.0" y="390" width="393" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="IVf-Wz-xza"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9c8-XN-Xbh" firstAttribute="top" secondItem="pfs-ze-LDe" secondAttribute="bottom" constant="67" id="6BR-4B-QPm"/>
-                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="KdM-Ez-qsF"/>
-                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OwC-gg-dqp"/>
-                            <constraint firstItem="9c8-XN-Xbh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="XOQ-2J-QTv"/>
-                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="YuO-Ew-WId"/>
-                            <constraint firstItem="9c8-XN-Xbh" firstAttribute="baseline" secondItem="a1a-St-MGZ" secondAttribute="baseline" id="e6j-YO-laF"/>
-                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="centerX" secondItem="pfs-ze-LDe" secondAttribute="centerX" id="eK6-r0-7Sw"/>
-                            <constraint firstItem="pfs-ze-LDe" firstAttribute="top" secondItem="Lqu-ar-J4j" secondAttribute="bottom" constant="92" id="jY4-3r-Wgj"/>
-                            <constraint firstItem="a1a-St-MGZ" firstAttribute="leading" secondItem="9c8-XN-Xbh" secondAttribute="trailing" constant="91" id="lek-Zi-erG"/>
-                            <constraint firstItem="pfs-ze-LDe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="pvl-F4-5Ft"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9c8-XN-Xbh" secondAttribute="bottom" constant="240" id="wkc-iu-2z6"/>
+                            <constraint firstItem="VTd-gm-PfH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="0tT-NX-cul"/>
+                            <constraint firstItem="9c8-XN-Xbh" firstAttribute="top" secondItem="ljQ-wl-G5A" secondAttribute="bottom" constant="70" id="2p6-lg-ohz"/>
+                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="trailing" secondItem="a1a-St-MGZ" secondAttribute="trailing" id="5bN-Eh-RBO"/>
+                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="leading" secondItem="9c8-XN-Xbh" secondAttribute="leading" id="HDg-HA-6MU"/>
+                            <constraint firstItem="VTd-gm-PfH" firstAttribute="top" secondItem="9c8-XN-Xbh" secondAttribute="bottom" constant="60" id="IyA-O9-BGZ"/>
+                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6z-oF-lFw"/>
+                            <constraint firstItem="ljQ-wl-G5A" firstAttribute="centerX" secondItem="VTd-gm-PfH" secondAttribute="centerX" id="R8A-rs-6om"/>
+                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="centerX" secondItem="pfs-ze-LDe" secondAttribute="centerX" id="TZ5-2G-0Ck"/>
+                            <constraint firstItem="ljQ-wl-G5A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="beE-0R-3RG"/>
+                            <constraint firstItem="pfs-ze-LDe" firstAttribute="top" secondItem="Lqu-ar-J4j" secondAttribute="bottom" constant="57" id="gFz-A9-DFh"/>
+                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="jk8-d4-lTU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VTd-gm-PfH" secondAttribute="bottom" constant="68" id="loB-Ws-5Tm"/>
+                            <constraint firstItem="Lqu-ar-J4j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="mAO-dG-JL7"/>
+                            <constraint firstItem="pfs-ze-LDe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="nTI-hP-JcQ"/>
+                            <constraint firstItem="ljQ-wl-G5A" firstAttribute="top" secondItem="pfs-ze-LDe" secondAttribute="bottom" constant="54" id="rDd-Qa-JoW"/>
+                            <constraint firstItem="pfs-ze-LDe" firstAttribute="centerX" secondItem="ljQ-wl-G5A" secondAttribute="centerX" id="s9O-ul-Qjo"/>
+                            <constraint firstItem="9c8-XN-Xbh" firstAttribute="baseline" secondItem="a1a-St-MGZ" secondAttribute="baseline" id="trv-3J-ZEs"/>
+                            <constraint firstItem="a1a-St-MGZ" firstAttribute="leading" secondItem="9c8-XN-Xbh" secondAttribute="trailing" constant="92" id="vRJ-gq-jgo"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nueva" id="BOW-k1-Yid"/>
                     <connections>
                         <outlet property="label" destination="pfs-ze-LDe" id="dTz-7x-zF0"/>
+                        <outlet property="pickerView" destination="ljQ-wl-G5A" id="Xzw-Nu-X2q"/>
                         <outlet property="textView" destination="Lqu-ar-J4j" id="Oad-u3-JHz"/>
                     </connections>
                 </viewController>
@@ -84,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MiCelda" textLabel="14J-bl-GWM" style="IBUITableViewCellStyleDefault" id="X8n-9Z-AHR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MiCelda" textLabel="14J-bl-GWM" detailTextLabel="Cut-ho-i3y" style="IBUITableViewCellStyleValue1" id="X8n-9Z-AHR">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X8n-9Z-AHR" id="gKZ-xf-BB0">
@@ -92,7 +117,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="14J-bl-GWM">
-                                            <rect key="frame" x="20" y="0.0" width="353" height="43.666667938232422"/>
+                                            <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cut-ho-i3y">
+                                            <rect key="frame" x="340.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -119,6 +151,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v7i-wy-vlb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wVx-AW-Rhi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
