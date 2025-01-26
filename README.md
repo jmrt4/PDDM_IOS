@@ -13,10 +13,10 @@
 - MisNotas, Parte I: 1 pts (0,5 + 0,5)
 - MisNotas, Parte II: 1 pts (0.25 + 0.25 + 0.25 + 0.25)
 
-## Sesion 3
+### Sesion 3
 
 - MisNotas, Parte I: 1 pts (0.25 + 0.5 + 0.25)
 
 ## Aclaraciones ejercicios
 
-Para navegar hasta como estaba la app de las notas (MisNotas) hasta la sesion 2 hay que irse a un tag llamado: terminada-sesion-2
+Para navegar hasta como estaba la app de las notas (MisNotas) hasta la sesion 2 hay que irse a un tag llamado: **terminada-sesion-2**
