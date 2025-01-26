@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         let nuevaNota = Nota(context:miContexto)
         nuevaNota.fecha = Date()
-        nuevaNota.texto = self.textView.text
+        nuevaNota.contenido = self.textView.text
         
         let numLibreta = self.pickerView.selectedRow(inComponent: 0)
         nuevaNota.libreta = self.miGestorPicker.libretas[numLibreta]

@@ -36,6 +36,7 @@
 		C7C78F192D46D9ED007116D0 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
 		C7C78F1F2D46ED07007116D0 /* ListaNotasCDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasCDController.swift; sourceTree = "<group>"; };
 		C7C78F212D46ED3D007116D0 /* Nota+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nota+Custom.swift"; sourceTree = "<group>"; };
+		C7C78F232D46F258007116D0 /* MisNotasNuevo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MisNotasNuevo.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,9 +386,10 @@
 		C7C78F072D46BD29007116D0 /* MisNotas.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				C7C78F232D46F258007116D0 /* MisNotasNuevo.xcdatamodel */,
 				C7C78F082D46BD29007116D0 /* MisNotas.xcdatamodel */,
 			);
-			currentVersion = C7C78F082D46BD29007116D0 /* MisNotas.xcdatamodel */;
+			currentVersion = C7C78F232D46F258007116D0 /* MisNotasNuevo.xcdatamodel */;
 			path = MisNotas.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

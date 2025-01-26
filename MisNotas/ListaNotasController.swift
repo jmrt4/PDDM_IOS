@@ -29,17 +29,17 @@ class ListaNotasController: UITableViewController, UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         throttler.throttle {
-            let texto = searchController.searchBar.text!
-            print("Buscando \(texto)")
+            let contenido = searchController.searchBar.text!
+            print("Buscando \(contenido)")
             
-            if texto != "" {
+            if contenido != "" {
                 guard let miDelegate = UIApplication.shared.delegate as? AppDelegate else {
                     return
                 }
                 
                 let miContexto = miDelegate.persistentContainer.viewContext
                 let request = NSFetchRequest<Nota>(entityName: "Nota")
-                let pred = NSPredicate(format: "texto CONTAINS[c] %@", argumentArray: [texto])
+                let pred = NSPredicate(format: "contenido CONTAINS[c] %@", argumentArray: [contenido])
                 let fechaSort = NSSortDescriptor(key: "fecha", ascending: false)
                 request.predicate = pred
                 request.sortDescriptors = [fechaSort]
@@ -86,7 +86,7 @@ class ListaNotasController: UITableViewController, UISearchResultsUpdating {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MiCelda", for: indexPath)
 
-        cell.textLabel?.text = self.listaNotas[indexPath.row].texto
+        cell.textLabel?.text = self.listaNotas[indexPath.row].contenido
         cell.detailTextLabel?.text = self.listaNotas[indexPath.row].libreta?.nombre
 
         return cell
