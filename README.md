@@ -20,5 +20,5 @@
 
 ## Aclaraciones ejercicios
 
-Para navegar hasta como estaba la app de las notas (MisNotas) hasta la sesion 2 hay que irse a un tag llamado: **terminada-sesion-2**
+Para navegar hasta como estaba la app de las notas (MisNotas) hasta la sesion 2 hay que irse a un tag llamado: **terminada-sesion-2** <br>
 Para navegar hasta como estaba la app de las notas (MisNotas) hasta la sesion 2 hay que irse a un tag llamado: **terminada-sesion-3**
