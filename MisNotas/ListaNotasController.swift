@@ -1,13 +1,24 @@
 import UIKit
 import CoreData
 
-class ListaNotasController: UITableViewController {
+class ListaNotasController: UITableViewController, UISearchResultsUpdating {
     var listaNotas: [Nota]!
+    let searchController = UISearchController(searchResultsController: nil)
+    let throttler = Throttler(minimumDelay: 0.5)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("hola soy ListaNotasController")
+
+        //iOS intentará pintar la tabla, hay que inicializarla aunque sea vacía
+        self.listaNotas = []
+        //ListaNotasController recibirá lo que se está escribiendo en la barra de búsqueda
+        searchController.searchResultsUpdater = self
+        //Configuramos el search controller
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Buscar texto"
+        //Lo añadimos a la tabla
+        searchController.searchBar.sizeToFit()
+        self.tableView.tableHeaderView = searchController.searchBar
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -16,17 +27,48 @@ class ListaNotasController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    func updateSearchResults(for searchController: UISearchController) {
+        throttler.throttle {
+            let texto = searchController.searchBar.text!
+            print("Buscando \(texto)")
+            
+            if texto != "" {
+                guard let miDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                    return
+                }
+                
+                let miContexto = miDelegate.persistentContainer.viewContext
+                let request = NSFetchRequest<Nota>(entityName: "Nota")
+                let pred = NSPredicate(format: "texto CONTAINS[c] %@", argumentArray: [texto])
+                let fechaSort = NSSortDescriptor(key: "fecha", ascending: false)
+                request.predicate = pred
+                request.sortDescriptors = [fechaSort]
+                let resultados = try! miContexto.fetch(request)
+                self.listaNotas = resultados
+                self.tableView.reloadData()
+            } else {
+                self.cargarTodasLasNotas()
+            }
+        }
+    }
+    
+    func cargarTodasLasNotas() {
         guard let miDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
         let miContexto = miDelegate.persistentContainer.viewContext
         let request = Nota.fetchRequest()
+        let fechaSort = NSSortDescriptor(key: "fecha", ascending: false)
+        request.sortDescriptors = [fechaSort]
         let notas = try! miContexto.fetch(request)
         
         self.listaNotas = notas
         self.tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        cargarTodasLasNotas()
     }
 
     // MARK: - Table view data source

@@ -16,6 +16,7 @@
 		C7C78F0E2D46BD2B007116D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C78F0C2D46BD2B007116D0 /* LaunchScreen.storyboard */; };
 		C7C78F162D46C29C007116D0 /* ListaNotasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C78F152D46C29C007116D0 /* ListaNotasController.swift */; };
 		C7C78F182D46CCD6007116D0 /* GestorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C78F172D46CCD6007116D0 /* GestorPicker.swift */; };
+		C7C78F1A2D46D9ED007116D0 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C78F192D46D9ED007116D0 /* Throttler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C7C78F0F2D46BD2B007116D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7C78F152D46C29C007116D0 /* ListaNotasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasController.swift; sourceTree = "<group>"; };
 		C7C78F172D46CCD6007116D0 /* GestorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestorPicker.swift; sourceTree = "<group>"; };
+		C7C78F192D46D9ED007116D0 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		C7C78EF22D46BD29007116D0 = {
 			isa = PBXGroup;
 			children = (
+				C7C78F192D46D9ED007116D0 /* Throttler.swift */,
 				C7C78F172D46CCD6007116D0 /* GestorPicker.swift */,
 				C7C78F152D46C29C007116D0 /* ListaNotasController.swift */,
 				C7C78EFD2D46BD29007116D0 /* MisNotas */,
@@ -149,6 +152,7 @@
 			files = (
 				C7C78F032D46BD29007116D0 /* ViewController.swift in Sources */,
 				C7C78EFF2D46BD29007116D0 /* AppDelegate.swift in Sources */,
+				C7C78F1A2D46D9ED007116D0 /* Throttler.swift in Sources */,
 				C7C78F162D46C29C007116D0 /* ListaNotasController.swift in Sources */,
 				C7C78F012D46BD29007116D0 /* SceneDelegate.swift in Sources */,
 				C7C78F092D46BD29007116D0 /* MisNotas.xcdatamodeld in Sources */,
