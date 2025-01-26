@@ -14,6 +14,7 @@
 		C7C78F092D46BD29007116D0 /* MisNotas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7C78F072D46BD29007116D0 /* MisNotas.xcdatamodeld */; };
 		C7C78F0B2D46BD2B007116D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C78F0A2D46BD2B007116D0 /* Assets.xcassets */; };
 		C7C78F0E2D46BD2B007116D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C78F0C2D46BD2B007116D0 /* LaunchScreen.storyboard */; };
+		C7C78F162D46C29C007116D0 /* ListaNotasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C78F152D46C29C007116D0 /* ListaNotasController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C7C78F0A2D46BD2B007116D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7C78F0D2D46BD2B007116D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7C78F0F2D46BD2B007116D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7C78F152D46C29C007116D0 /* ListaNotasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		C7C78EF22D46BD29007116D0 = {
 			isa = PBXGroup;
 			children = (
+				C7C78F152D46C29C007116D0 /* ListaNotasController.swift */,
 				C7C78EFD2D46BD29007116D0 /* MisNotas */,
 				C7C78EFC2D46BD29007116D0 /* Products */,
 			);
@@ -143,6 +146,7 @@
 			files = (
 				C7C78F032D46BD29007116D0 /* ViewController.swift in Sources */,
 				C7C78EFF2D46BD29007116D0 /* AppDelegate.swift in Sources */,
+				C7C78F162D46C29C007116D0 /* ListaNotasController.swift in Sources */,
 				C7C78F012D46BD29007116D0 /* SceneDelegate.swift in Sources */,
 				C7C78F092D46BD29007116D0 /* MisNotas.xcdatamodeld in Sources */,
 			);
