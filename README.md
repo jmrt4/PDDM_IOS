@@ -21,6 +21,7 @@
 ### Sesion 5
 
 - MisNotas, Migraciones: 0,5 pts
+- PruebaContextosMultiples: 1 pts
 
 ## Aclaraciones ejercicios
 
