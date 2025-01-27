@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainView" customModule="ElTiempo_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce la localidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jud-OC-K3n">
+                                <rect key="frame" x="125.5" y="222" width="163" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-nL-2QV">
+                                <rect key="frame" x="100" y="261" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-CH-7wx">
+                                <rect key="frame" x="152" y="327" width="110" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ver el tiempo"/>
+                                <connections>
+                                    <action selector="botonPulsado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVQ-eo-cY8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cp-qO-CzP">
+                                <rect key="frame" x="127" y="399" width="140" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Yfb-m6-BDa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d6e-Wq-4CL">
+                                <rect key="frame" x="88" y="495" width="238" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d6e-Wq-4CL" secondAttribute="height" multiplier="238:177" id="z08-lP-D2b"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WDm-nL-2QV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="0Mu-KP-GOC"/>
+                            <constraint firstItem="vG7-CH-7wx" firstAttribute="top" secondItem="jud-OC-K3n" secondAttribute="bottom" constant="84" id="0eo-2c-U9I"/>
+                            <constraint firstItem="d6e-Wq-4CL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="2vn-Ul-vc4"/>
+                            <constraint firstItem="jud-OC-K3n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="178" id="3mG-6o-yBK"/>
+                            <constraint firstItem="WDm-nL-2QV" firstAttribute="top" secondItem="jud-OC-K3n" secondAttribute="bottom" constant="18" id="AkI-bf-5tb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8cp-qO-CzP" secondAttribute="trailing" constant="147" id="Cxa-45-gns"/>
+                            <constraint firstItem="8cp-qO-CzP" firstAttribute="top" secondItem="vG7-CH-7wx" secondAttribute="bottom" constant="41" id="IGY-QD-3PH"/>
+                            <constraint firstItem="WDm-nL-2QV" firstAttribute="centerX" secondItem="jud-OC-K3n" secondAttribute="centerX" id="OWT-cH-nOi"/>
+                            <constraint firstItem="vG7-CH-7wx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wnk-ZK-D0d"/>
+                            <constraint firstItem="d6e-Wq-4CL" firstAttribute="top" secondItem="8cp-qO-CzP" secondAttribute="bottom" constant="68" id="aSP-J9-0HP"/>
+                            <constraint firstItem="8cp-qO-CzP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="okh-vq-bAd"/>
+                            <constraint firstItem="d6e-Wq-4CL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sdq-sS-UnW"/>
+                            <constraint firstItem="jud-OC-K3n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tDj-cb-epM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="campoTexto" destination="WDm-nL-2QV" id="vEh-Qg-vas"/>
+                        <outlet property="estadoImage" destination="d6e-Wq-4CL" id="4jL-4B-SqF"/>
+                        <outlet property="estadoLabel" destination="8cp-qO-CzP" id="GwB-h0-1VN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
